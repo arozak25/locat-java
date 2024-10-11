@@ -1,0 +1,13 @@
+services:
+    postgres:
+      image: 'postgres:16.0'
+      environment:
+        - 'POSTGRES_USER=postgres'
+        - 'POSTGRES_PASSWORD=postgres'
+        - 'POSTGRES_DB=postgres'
+      ports:
+        - '5432:5432'
+    jenkins:
+      image: 'jenkins/jenkins:lts-jdk17'
+      ports:
+        - '8080:8080'
